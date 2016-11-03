@@ -11,18 +11,14 @@ class AuthUtils
 
 	private static function getFormatedUTCTime()
 	{
-		return date('Y-m-d\TH:i:s', self::getUTCTime());
+		return gmdate('Y-m-d\TH:i:s');
 	}
 	
 	private static function getUTCTime()
 	{
-		$timezone = date_default_timezone_get();
-		date_default_timezone_set('UTC');
-		$ret = time();
-		date_default_timezone_set($timezone);
-	
-		return $ret;
+		return gmmktime();
 	}
+
 	
 	private static function prepareToken($date, $seed, $clientSecret)
 	{
