@@ -2,7 +2,7 @@
    "name":"powerforms/apiclient",
    "description":"API client for powerforms",
    "type":"extension",
-   "license":"GPL-v3",
+   "license":"GPL-3.0-only",
    "require":{
       "php":">=5.4.0",
       "guzzlehttp/guzzle":"^5.3"
